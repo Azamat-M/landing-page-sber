@@ -45,6 +45,10 @@ ul li {
 .navbar a, .add_info button {
     color: #fff;
 }
+.navbar a:hover,
+.projects_tab_link:hover {
+    color: #E3B873;
+}
 
 button {
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
@@ -83,13 +87,14 @@ h1 {
     font-size: 40px;
     line-height: 53px;
     text-transform: uppercase;
+    font-weight: normal;
 }
 h2 {
     font-family: 'Yeseva One';
     font-size: 20px;
     line-height: 28px;
     text-transform: uppercase;
-
+    font-weight: normal;
 }
 h3 {
     font-family: 'Yeseva One';
@@ -97,6 +102,7 @@ h3 {
     line-height: 25px;
     text-transform: uppercase;
     color: #E3B873;
+    font-weight: normal;
 }
 h1 span {
     color: #E3B873;
@@ -181,9 +187,13 @@ h1 span {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.3);
 }
-.projects_tab_link.active::after {
-    content: '';
+.projects_tab_link.active::after,
+.projects_tab_link:hover::after {
     background-color: #E3B873;
+}
+.projects_tab_link::after {
+    content: '';
+    background-color:transparent;
     display: inline-block;
     height: 1px;
     width: 100%;
@@ -205,9 +215,11 @@ h1 span {
     margin: 0;
     margin-left: 11px;
 }
-.projects_link.active svg rect {
+.projects_link.active svg rect,
+.projects_link:hover svg rect {
     fill-opacity: 1;
 }
+
 
 .control {
     margin-top: -480px;
@@ -439,7 +451,9 @@ h1 span {
 .types_li:last-child {
     margin-bottom: 0;
 }
-.types_link.active {
+.types_link.active,
+.types_link:hover {
+    color: #E3B873;
     border-bottom: 1px solid #E3B873;
 }
 .types_gallery {
@@ -633,6 +647,9 @@ input[type='text'], input[type='email'], textarea {
     line-height: 23px;
     
     height: 32px;
+}
+textarea {
+    height: auto;
 }
 .checkbox {
     display: flex;
@@ -862,6 +879,9 @@ img {
         margin-left: 0;
         margin-right: 0;
         max-width: 270px;
+    }
+    .types_wrapper {
+        padding: 0;
     }
     .repair_footer span {
         margin-left: 0;
